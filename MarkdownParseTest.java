@@ -1,3 +1,4 @@
+//imports junit Assert methods
 import static org.junit.Assert.*;
 import org.junit.*;
 

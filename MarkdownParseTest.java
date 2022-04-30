@@ -16,7 +16,7 @@ public class MarkdownParseTest  {
     }
 
     @Test
-    public void MarkdownParseTest() throws IOException {
+    public void MarkdownParseTest1() throws IOException {
         Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);  
 
@@ -36,15 +36,17 @@ public class MarkdownParseTest  {
         Path fileName = Path.of("test2.md");
         String content = Files.readString(fileName);  
 
-        assertEquals(MarkdownParse.getLinks(content), List.of("youtube.com", "spotify.com"));
+        assertEquals(MarkdownParse.getLinks(content), List.of("spotify.com"));
     }
 
     @Test
     public void MarkdownParseTest4() throws IOException {
         Path fileName = Path.of("test3.md");
-        String content = Files.readString(fileName);  
+        String content = Files.readString(fileName);
+        ArrayList<String> empty = new ArrayList<>();
 
-        assertEquals(MarkdownParse.getLinks(content), List.of("google.com", "apple.com"));
+
+        assertEquals(MarkdownParse.getLinks(content), List.of("spotify.com"));
     }
 
 }

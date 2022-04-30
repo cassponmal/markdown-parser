@@ -46,7 +46,18 @@ public class MarkdownParseTest  {
         ArrayList<String> empty = new ArrayList<>();
 
 
-        assertEquals(MarkdownParse.getLinks(content), List.of("spotify.com"));
+        assertEquals(MarkdownParse.getLinks(content), empty);
     }
+
+
+    @Test
+    public void MarkdownParseTest5() throws IOException {
+        Path fileName = Path.of("test4.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> empty = new ArrayList<>();
+        assertEquals(MarkdownParse.getLinks(content), empty);
+    }
+
+
 
 }
